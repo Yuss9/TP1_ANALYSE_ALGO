@@ -5,6 +5,11 @@ Nous retrouvons dans ce repo les trois problèmes du TP1.
 
 **Dans le fichier "documentation.pdf," vous trouverez toutes les réponses du TP1.**
 
+Entrer dans les codes sources : 
+```bash
+cd src
+```
+
 
 ## Authors
 
