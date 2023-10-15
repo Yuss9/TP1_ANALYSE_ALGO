@@ -42,14 +42,6 @@ Il s'agit d'une amélioration significative par rapport à l'approche exponentie
 
 
 
-COMPLEXITE DE LA PREMIERE FONCTION : 
-La complexité de la fonction sommeMinRec est exponentielle en fonction de la taille de l'entrée. Plus précisément, elle est en notation grand-O de type O(3^n), où "n" est la taille de l'entrée, c'est-à-dire le nombre de cases sur le plateau de jeu.
-
-La raison de cette complexité est que la fonction explore toutes les combinaisons possibles de mouvements (1, 3, ou 5 cases) pour atteindre la case i. Chaque fois qu'elle explore une option de mouvement, elle crée une branche récursive, et cela se répète pour chaque case du plateau de jeu. Par conséquent, le nombre total de combinaisons à explorer augmente de manière exponentielle avec la taille de la séquence.
-
-Cela signifie que le temps d'exécution de la fonction sommeMinRec augmente rapidement à mesure que la taille de la séquence augmente, ce qui est caractéristique des problèmes NP-difficiles. C'est pourquoi il est fortement recommandé d'utiliser l'approche de la programmation dynamique pour résoudre ce problème, car elle offre une complexité temporelle bien meilleure (O(n)) en évitant les calculs répétés.
-
-
 
 
 g) 
