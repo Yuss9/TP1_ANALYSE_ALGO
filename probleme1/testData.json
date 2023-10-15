@@ -1,0 +1,20 @@
+{
+    "executable": "python3 algo1.py",
+    "generator": "python3 genererNombres.py --tempFile",
+    "temp_file": "calculAux.tmp",
+    "valeurInitiale": 10,
+    "borneSup": 1000000,
+    "increment": "floor(3*x/2)+1",
+    "attenteMax": 25,
+    "logScale": false,
+    "courbesSup": [
+        "log(x)",
+        "x",
+        "x*log(x)",
+        "x**2",
+        "2**x",
+        "x**3"
+    ],
+    "outputImageNamePrefix": "graph",
+    "outputImageSize": "1000,700"
+}

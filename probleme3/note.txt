@@ -1,0 +1,62 @@
+b) La taille de l'entrée est déterminée par le nombre de lignes dans le fichier. Dans votre exemple de fichier, il y a 21 lignes, dont une ligne d'en-tête et 20 lignes de valeurs. Par conséquent, la taille de l'entrée est de 20, car il y a 20 valeurs de cases dans le plateau de jeu.
+
+La complexité temporelle de la fonction sommeMin est exponentielle en fonction de la taille de l'entrée. Cela est dû à la récursivité de la fonction sommeMinRec. Pour chaque case i, la fonction explore trois options (pas de 1, 3 ou 5) et effectue des appels récursifs pour chaque option. Cela conduit à une croissance exponentielle du nombre d'appels récursifs en fonction de la taille de l'entrée.
+
+En d'autres termes, la complexité temporelle de la fonction sommeMin n'est pas polynomiale, mais exponentielle en fonction de la taille de l'entrée. Pour de grandes valeurs de n, le temps d'exécution de cette fonction augmentera considérablement, ce qui en fait une méthode peu efficace pour les entrées de grande taille.
+
+
+c) 
+Le temps d'exécution de l'algorithme non optimisé est de 0.16776394844055176 secondes pour résoudre le problème de taille 31. Cela confirme que le temps d'exécution est en accord avec la complexité temporelle attendue (exponentielle en O(3^n)) de l'algorithme non optimisé.
+
+Justification :
+
+L'algorithme non optimisé utilise une approche récursive où il explore toutes les combinaisons possibles de mouvements pour atteindre la case i. Pour chaque case, il explore trois options de pas (1, 3, 5), créant ainsi une récursion exponentielle.
+L'exponentielle est caractérisée par une croissance rapide du temps d'exécution à mesure que la taille de l'entrée augmente. Dans ce cas, pour une entrée de taille 31, le temps d'exécution est significativement plus long que pour une entrée plus petite, ce qui est conforme à une complexité exponentielle.
+En résumé, le temps d'exécution de l'algorithme non optimisé augmente rapidement avec la taille de l'entrée, ce qui est caractéristique des problèmes NP-difficiles, et il correspond à la complexité exponentielle attendue.
+
+Somme minimale pour atteindre la case 31  avec l'algo pas optimiser : 140
+Temps d'exécution (Algo pas optimiser): 0.16776394844055176 secondes
+
+
+
+d) L'algorithme que vous avez implémenté pour résoudre ce problème utilise une approche récursive, et il est exponentiel en termes de complexité temporelle. Voici une explication intuitive de pourquoi l'algorithme est si long :
+
+Exponentiellement de nombreuses combinaisons : L'algorithme explore toutes les combinaisons possibles de mouvements (1, 3, ou 5 cases) pour atteindre la dernière case. Chaque fois qu'il explore une option de mouvement, il crée une branche récursive. Par conséquent, le nombre total de combinaisons à explorer augmente de manière exponentielle avec la taille de la séquence. Plus la séquence est longue, plus le nombre de branches de l'arbre de récursion augmente de manière exponentielle.
+
+Répétition des calculs : En raison de la nature récursive de l'algorithme, de nombreux calculs sont répétés. Par exemple, lorsque vous calculez la somme minimale pour atteindre une certaine case, l'algorithme peut recalculer la somme minimale pour des cas déjà explorés à plusieurs reprises. Cela entraîne un gaspillage de ressources de calcul.
+
+Pas d'optimisation de la mémoire : L'algorithme ne stocke pas les résultats intermédiaires, ce qui signifie qu'il peut recalculer la même chose plusieurs fois. Cela conduit à une utilisation inefficace de la mémoire et à une augmentation du temps d'exécution.
+
+Complexité combinatoire : Le problème de minimiser la somme des valeurs en se déplaçant sur un plateau de jeu avec des contraintes de pas (1, 3, ou 5) est intrinsèquement complexe en raison des nombreuses combinaisons possibles.
+
+En résumé, l'algorithme est long en raison de la nature exponentielle du problème, de l'exploration de nombreuses combinaisons, des calculs répétés et de l'absence d'optimisation de la mémoire. Cela signifie que le temps d'exécution augmente rapidement à mesure que la taille de la séquence augmente, ce qui est caractéristique des problèmes NP-difficiles. Pour résoudre ce problème de manière plus efficace, il serait nécessaire d'explorer des approches algorithmiques plus avancées, telles que la programmation dynamique, qui permettraient de réduire le temps d'exécution.
+
+
+f)
+
+La complexité temporelle de la fonction sommeMinDynamique est en notation grand-O de type O(n), où "n" est la taille de l'entrée, c'est-à-dire le nombre de cases sur le plateau de jeu.
+
+L'algorithme parcourt toutes les cases du plateau de jeu une fois et explore trois options de pas pour chaque case, ce qui donne un nombre total d'opérations proportionnel à la taille du plateau de jeu, soit O(n). La programmation dynamique permet de stocker les résultats intermédiaires pour éviter les calculs répétés, ce qui réduit considérablement la complexité temporelle par rapport à l'approche récursive exponentielle. En conséquence, la complexité temporelle est polynomiale en O(n), ce qui signifie que le temps d'exécution augmente linéairement avec la taille de l'entrée.
+
+Il s'agit d'une amélioration significative par rapport à l'approche exponentielle qui avait une complexité temporelle O(3^n) pour le même problème.
+
+
+
+COMPLEXITE DE LA PREMIERE FONCTION : 
+La complexité de la fonction sommeMinRec est exponentielle en fonction de la taille de l'entrée. Plus précisément, elle est en notation grand-O de type O(3^n), où "n" est la taille de l'entrée, c'est-à-dire le nombre de cases sur le plateau de jeu.
+
+La raison de cette complexité est que la fonction explore toutes les combinaisons possibles de mouvements (1, 3, ou 5 cases) pour atteindre la case i. Chaque fois qu'elle explore une option de mouvement, elle crée une branche récursive, et cela se répète pour chaque case du plateau de jeu. Par conséquent, le nombre total de combinaisons à explorer augmente de manière exponentielle avec la taille de la séquence.
+
+Cela signifie que le temps d'exécution de la fonction sommeMinRec augmente rapidement à mesure que la taille de la séquence augmente, ce qui est caractéristique des problèmes NP-difficiles. C'est pourquoi il est fortement recommandé d'utiliser l'approche de la programmation dynamique pour résoudre ce problème, car elle offre une complexité temporelle bien meilleure (O(n)) en évitant les calculs répétés.
+
+
+
+
+g) 
+Les résultats que vous avez obtenus confirment l'efficacité de l'algorithme optimisé utilisant la programmation dynamique par rapport à l'algorithme non optimisé. Voici une comparaison des deux approches :
+
+Algorithme non optimisé : temps d'exécution de 0.16776394844055176 secondes pour résoudre le problème de taille 31.
+Algorithme optimisé : temps d'exécution de 1.811981201171875e-05 secondes pour résoudre le même problème de taille 31.
+On peut voir une différence significative dans les temps d'exécution. L'algorithme optimisé est beaucoup plus rapide, avec un temps d'exécution de l'ordre de la dizaine de microsecondes, tandis que l'algorithme non optimisé prend beaucoup plus de temps (environ 0.1677 secondes) pour résoudre le même problème.
+
+Cela confirme que l'approche de programmation dynamique est bien plus efficace pour résoudre ce problème et que le temps d'exécution est en accord avec la complexité temporelle attendue (O(n)) de l'algorithme optimisé.
